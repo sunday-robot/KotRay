@@ -49,9 +49,9 @@ class Aabb(
         val minX = min(min.x, arg.min.x)
         val maxX = min(max.x, arg.max.x)
         val minY = min(min.y, arg.min.y)
-        val maxY = min(max.y, arg.max.y)
-        val minZ = min(min.z, arg.min.z)
-        val maxZ = min(max.z, arg.max.z)
+        val maxY = max(max.y, arg.max.y)
+        val minZ = max(min.z, arg.min.z)
+        val maxZ = max(max.z, arg.max.z)
         return Aabb(Vec3(minX, minY, minZ), Vec3(maxX, maxY, maxZ))
     }
 }
